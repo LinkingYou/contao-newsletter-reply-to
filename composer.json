@@ -1,7 +1,7 @@
 {
     "name": "linking-you/contao-newsletter-reply-to",
     "type": "contao-bundle",
-    "description": "Erweiter den Contao-Newsletter um eine Reply-To-Adresse",
+    "description": "Erweitert den Contao-Newsletter um eine Reply-To-Adresse",
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
