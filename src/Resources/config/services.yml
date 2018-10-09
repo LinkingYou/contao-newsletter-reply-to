@@ -1,0 +1,14 @@
+services:
+    _instanceof:
+        Contao\CoreBundle\Framework\FrameworkAwareInterface:
+            calls:
+                - ["setFramework", ["@contao.framework"]]
+
+        Symfony\Component\DependencyInjection\ContainerAwareInterface:
+            calls:
+                - ["setContainer", ["@service_container"]]
+    LinkingYou\ContaoNewsletterReplyTo\Listener\Newsletter:
+        class: LinkingYou\ContaoNewsletterReplyTo\Listener\Newsletter
+        tags:
+            - { name: swiftmailer.default.plugin }
+        arguments: ['@request_stack']
