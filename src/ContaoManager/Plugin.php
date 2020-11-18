@@ -10,10 +10,10 @@
 
 namespace LinkingYou\ContaoNewsletterReplyTo\ContaoManager;
 
-use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Contao\NewsletterBundle\ContaoNewsletterBundle;
 use LinkingYou\ContaoNewsletterReplyTo\ContaoNewsletterReplyToBundle;
 
 class Plugin implements BundlePluginInterface
@@ -25,7 +25,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(ContaoNewsletterReplyToBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
+                ->setLoadAfter([ContaoNewsletterBundle::class]),
         ];
     }
 }
